@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租车平台2025扩张战略数据Dashboard</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=YOUR_AMAP_KEY&plugin=AMap.HeatMap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .dashboard {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        
+        .panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .panel h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        .map-panel {
+            grid-column: 1 / -1;
+            height: 500px;
+        }
+        
+        #mapContainer {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .stats-table {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .chart-container {
+            height: 400px;
+            position: relative;
+        }
+        
+        .metric-card {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .metric-card h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .metric-card p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .legend {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-panel {
+                height: 400px;
+            }
+            
+            #mapContainer {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚗 租车平台2025扩张战略数据Dashboard</h1>
+        <p>全国热门旅游目的地门店扩张计划可视化分析</p>
+    </div>
+    
+    <div class="dashboard">
+        <!-- 热力地图 -->
+        <div class="panel map-panel">
+            <h2>🗺️ 全国门店增量热力地图</h2>
+            <div id="mapContainer"></div>
+            <div class="legend">
+                <span style="color: #ff4444;">● 高增量区域</span>
+                <span style="color: #ffaa00; margin-left: 20px;">● 中增量区域</span>
+                <span style="color: #00ff00; margin-left: 20px;">● 低增量区域</span>
+            </div>
+        </div>
+        
+        <!-- 省份统计表格 -->
+        <div class="panel">
+            <h2>📊 各省扩张统计总览</h2>
+            <div class="stats-table">
+                <table id="provinceTable">
+                    <thead>
+                        <tr>
+                            <th>省份</th>
+                            <th>总增量</th>
+                            <th>2025目标总数</th>
+                            <th>城市数</th>
+                            <th>平均增量</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Top 10 城市增量排名 -->
+        <div class="panel">
+            <h2>🏆 Top 10城市增量排名</h2>
+            <div class="chart-container">
+                <canvas id="topCitiesChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 原始数据
+        const rawData = `池州	安徽	55	72	17	20%	4	池州市九华山风景区
+滁州	安徽	55	72	17	20%	4	滁州市琅琊山景区
+黄山	安徽	55	72	17	20%	4	黄山市黄山风景区
+宣城	安徽	55	72	17	20%	4	宣城市绩溪龙川景区
+北京	北京	120	150	30	30%	4	故宫博物院
+北京	北京	120	150	30	30%	4	天坛公园
+北京	北京	120	150	30	30%	4	颐和园
+北京	北京	120	150	30	30%	4	八达岭 — 慕田峪长城旅游区
+南平	福建	240	260	20	25%	4	南平市武夷山景区
+莆田	福建	240	260	20	25%	4	莆田市湄洲岛妈祖文化旅游区
+厦门	福建	240	260	20	25%	4	厦门市鼓浪屿风景名胜区
+厦门	福建	240	260	20	25%	4	厦门市厦门园林植物园景区
+甘南州	甘肃	80	90	10	10%	4	甘南州冶力关旅游区
+酒泉	甘肃	80	90	10	10%	4	酒泉市敦煌莫高窟景区
+兰州	甘肃	80	90	10	10%	4	兰州市兰州百里黄河风情线大景区
+张掖	甘肃	80	90	10	10%	4	张掖市七彩丹霞旅游景区
+广州	广东	76	120	44	50%	5	广州市长隆旅游度假区
+河源	广东	76	120	44	50%	5	河源市万绿湖风景区
+惠州	广东	76	120	44	50%	5	惠州市罗浮山景区
+韶关	广东	76	120	44	50%	5	韶关市丹霞山景区
+深圳	广东	76	120	44	50%	5	深圳市华侨城旅游度假区
+崇左	广西	45	60	15	18%	4	崇左市德天跨国瀑布景区
+桂林	广西	45	60	15	18%	4	桂林市漓江景区
+桂林	广西	45	60	15	18%	4	桂林市独秀峰・王城景区
+柳州	广西	45	60	15	18%	4	柳州市程阳八寨景区
+安顺	贵州	22	40	18	50%	4	安顺市黄果树大瀑布景区
+毕节	贵州	22	40	18	50%	4	毕节市织金洞景区
+贵阳	贵州	22	40	18	50%	4	贵阳市花溪青岩古镇景区
+黔西南州	贵州	22	40	18	50%	4	黔西南州万峰林景区
+三亚	海南	20	25	5	20%	2	三亚市南山文化旅游区
+三亚	海南	20	25	5	20%	2	三亚市天涯海角游览区
+保定	河北	35	45	10	20%	4	保定市白洋淀景区
+承德	河北	35	45	10	20%	4	承德市承德避暑山庄及周围寺庙景区
+邯郸	河北	35	45	10	20%	4	邯郸市娲皇宫景区
+石家庄	河北	35	45	10	20%	4	石家庄市西柏坡景区
+焦作	河南	52	60	8	50%	4	焦作市云台山风景名胜区
+洛阳	河南	52	60	8	50%	4	洛阳市龙门石窟景区
+新乡	河南	52	60	8	50%	4	新乡市宝泉旅游区
+郑州	河南	52	60	8	50%	4	郑州市嵩山少林寺景区
+哈尔滨	黑龙江	62	70	8	50%	3	哈尔滨市太阳岛景区
+齐齐哈尔	黑龙江	62	70	8	50%	3	齐齐哈尔市扎龙生态旅游区
+五大连池	黑龙江	62	70	8	50%	3	五大连池风景区
+黄冈	湖北	133	150	17	30%	4	黄冈市麻城龟峰山景区
+神农架林区	湖北	133	150	17	30%	4	神农架林区神农架景区
+十堰	湖北	133	150	17	30%	4	十堰市武当山风景区
+武汉	湖北	133	150	17	30%	4	武汉市黄鹤楼公园
+衡阳	湖南	114	130	16	21%	4	衡阳市南岳衡山旅游区
+湘西土家族苗族自治州	湖南	114	130	16	21%	4	湘西土家族苗族自治州凤凰古城旅游区
+张家界	湖南	114	130	16	21%	4	张家界市武陵源 - 天门山旅游区
+长沙	湖南	114	130	16	21%	4	长沙市岳麓山・橘子洲旅游区
+松原	吉林	46	55	9	50%	3	松原市前郭查干湖景区
+延边朝鲜族自治州	吉林	46	55	9	50%	3	延边朝鲜族自治州长白山景区
+长春	吉林	46	55	9	50%	3	长春市伪满皇宫博物馆
+常州	江苏	192	200	8	25%	4	常州市天目湖景区
+连云港	江苏	192	200	8	25%	4	连云港市连岛景区
+南京	江苏	192	200	8	25%	4	南京市夫子庙 - 秦淮风光带景区
+苏州	江苏	192	200	8	25%	4	苏州市苏州园林（拙政园、留园、虎丘）
+九江	江西	89	100	11	18%	4	九江市庐山景区
+南昌	江西	89	100	11	18%	4	南昌市滕王阁旅游区
+上饶	江西	89	100	11	18%	4	上饶市三清山景区
+上饶	江西	89	100	11	18%	4	上饶市篁岭景区
+本溪	辽宁	15	40	25	33%	3	本溪市本溪水洞景区
+大连	辽宁	15	40	25	33%	3	大连市老虎滩海洋公园 — 老虎滩极地馆
+沈阳	辽宁	15	40	25	33%	3	沈阳市沈阳植物园
+鄂尔多斯	内蒙古	44	70	26	50%	3	鄂尔多斯市响沙湾旅游区
+呼伦贝尔	内蒙古	44	70	26	50%	3	呼伦贝尔市中俄边境旅游区
+兴安盟	内蒙古	44	70	26	50%	3	兴安盟阿尔山 - 柴河旅游景区
+固原	宁夏	35	60	25	20%	3	固原市六盘山红军长征旅游区
+银川	宁夏	35	60	25	20%	3	银川市镇北堡西部影视城
+中卫	宁夏	35	60	25	20%	3	中卫市沙坡头旅游景区
+海北州	青海	25	50	25	20%	2	海北州阿咪东索景区
+西宁	青海	25	50	25	20%	2	西宁市青海湖景区
+济南	山东	52	60	8	50%	4	济南市天下第一泉风景区
+济宁	山东	52	60	8	50%	4	济宁市曲阜明故城（三孔）旅游区
+青岛	山东	52	60	8	50%	4	青岛市奥帆海洋文化旅游区
+泰安	山东	52	60	8	50%	4	泰安市泰山景区
+大同	山西	46	60	14	50%	4	大同市云冈石窟景区
+晋中	山西	46	60	14	50%	4	晋中市平遥古城景区
+临汾	山西	46	60	14	50%	4	临汾市洪洞大槐树寻根祭祖园旅游景区
+忻州	山西	46	60	14	50%	4	忻州市五台山风景名胜区
+渭南	陕西	58	80	22	50%	4	渭南市华山景区
+西安	陕西	58	80	22	50%	4	西安市秦始皇兵马俑博物馆
+西安	陕西	58	80	22	50%	4	西安市华清池景区
+延安	陕西	58	80	22	50%	4	延安市延川黄河乾坤湾景区
+上海	上海	35	50	15	20%	1	上海市崇明区西沙明珠湖景区
+阿坝藏族羌族自治州	四川	155	200	45	20%	5	阿坝藏族羌族自治州九寨沟景区
+阿坝藏族羌族自治州	四川	155	200	45	20%	5	阿坝藏族羌族自治州四姑娘山景区
+成都	四川	155	200	45	20%	5	成都市青城山 - 都江堰旅游景区
+甘孜藏族自治州	四川	155	200	45	20%	5	甘孜藏族自治州稻城亚丁景区
+乐山	四川	155	200	45	20%	5	乐山市峨眉山景区
+天津	天津	30	40	10	20%	2	天津古文化街旅游区（津门故里）
+天津	天津	30	40	10	20%	2	盘山风景名胜区
+拉萨	西藏	68	100	32	50%	2	拉萨市布达拉宫景区
+拉萨	西藏	68	100	32	50%	2	拉萨市大昭寺景区
+阿克苏地区	新疆	137	200	63	30%	4	阿克苏地区天山托木尔景区
+阿勒泰地区	新疆	137	200	63	30%	4	阿勒泰地区喀纳斯景区
+乌鲁木齐	新疆	137	200	63	30%	4	乌鲁木齐市天山天池风景名胜区
+伊犁哈萨克自治州	新疆	137	200	63	30%	4	伊犁哈萨克自治州那拉提旅游风景区
+迪庆藏族自治州	云南	160	200	40	40%	4	迪庆藏族自治州香格里拉普达措国家公园
+昆明	云南	160	200	40	40%	4	昆明市石林风景区
+丽江	云南	160	200	40	40%	4	丽江市丽江古城景区
+腾冲	云南	160	200	40	40%	4	腾冲市和顺古镇景区
+杭州	浙江	230	250	20	10%	4	杭州市西湖风景名胜区
+丽水	浙江	230	250	20	10%	4	丽水市云和梯田景区
+温州	浙江	230	250	20	10%	4	温州市刘伯温故里景区
+舟山	浙江	230	250	20	10%	4	舟山市普陀山风景名胜区
+重庆	重庆	67	100	33	30%	4	重庆市大足石刻景区
+重庆	重庆	67	100	33	30%	4	重庆市武隆喀斯特旅游区
+重庆	重庆	67	100	33	30%	4	重庆市涪陵区武陵山大裂谷景区
+重庆	重庆	67	100	33	30%	4	重庆市奉节县白帝城・瞿塘峡景区`;
+
+        // 解析数据
+        function parseData() {
+            const lines = rawData.trim().split('\n');
+            const data = [];
+            
+            lines.forEach(line => {
+                const parts = line.split('\t');
+                if (parts.length >= 8) {
+                    data.push({
+                        city: parts[0],
+                        province: parts[1],
+                        stores2024: parseInt(parts[2]),
+                        target2025: parseInt(parts[3]),
+                        increment: parseInt(parts[4]),
+                        franchiseRate: parts[5],
+                        attractions: parseInt(parts[6]),
+                        attraction5A: parts[7]
+                    });
+                }
+            });
+            
+            return data;
+        }
+        
+        // 按省份聚合数据
+        function aggregateByProvince(data) {
+            const provinceMap = {};
+            
+            data.forEach(item => {
+                if (!provinceMap[item.province]) {
+                    provinceMap[item.province] = {
+                        province: item.province,
+                        totalIncrement: 0,
+                        totalTarget2025: 0,
+                        cityCount: new Set(),
+                        cities: []
+                    };
+                }
+                
+                provinceMap[item.province].totalIncrement += item.increment;
+                provinceMap[item.province].totalTarget2025 += item.target2025;
+                provinceMap[item.province].cityCount.add(item.city);
+                provinceMap[item.province].cities.push(item);
+            });
+            
+            return Object.values(provinceMap).map(p => ({
+                ...p,
+                cityCount: p.cityCount.size,
+                avgIncrement: Math.round(p.totalIncrement / p.cityCount.size * 10) / 10
+            }));
+        }
+        
+        // 获取Top 10城市
+        function getTop10Cities(data) {
+            const cityMap = {};
+            
+            data.forEach(item => {
+                if (!cityMap[item.city]) {
+                    cityMap[item.city] = {
+                        city: item.city,
+                        province: item.province,
+                        increment: item.increment,
+                        stores2024: item.stores2024,
+                        target2025: item.target2025
+                    };
+                }
+            });
+            
+            return Object.values(cityMap)
+                .sort((a, b) => b.increment - a.increment)
+                .slice(0, 10);
+        }
+        
+        // 城市坐标数据（简化版本）
+        const cityCoordinates = {
+            '北京': [116.407526, 39.90403],
+            '上海': [121.473701, 31.230416],
+            '广州': [113.280637, 23.125178],
+            '深圳': [114.085947, 22.547],
+            '杭州': [120.153576, 30.287459],
+            '成都': [104.065735, 30.659462],
+            '西安': [108.948024, 34.263161],
+            '重庆': [106.504962, 29.533155],
+            '武汉': [114.298572, 30.584355],
+            '南京': [118.767413, 32.041544],
+            '天津': [117.190182, 39.125596],
+            '苏州': [120.619585, 31.299379],
+            '长沙': [112.982279, 28.19409],
+            '郑州': [113.665412, 34.757975],
+            '青岛': [120.355173, 36.082982],
+            '大连': [121.618622, 38.91459],
+            '宁波': [121.549792, 29.868388],
+            '厦门': [118.11022, 24.490474],
+            // 添加更多城市坐标...
+        };
+        
+        // 初始化地图
+        function initMap() {
+            const map = new AMap.Map('mapContainer', {
+                zoom: 5,
+                center: [104.065735, 30.659462],
+                mapStyle: 'amap://styles/blue'
+            });
+            
+            const data = parseData();
+            const cityIncrements = {};
+            
+            data.forEach(item => {
+                if (!cityIncrements[item.city]) {
+                    cityIncrements[item.city] = item.increment;
+                }
+            });
+            
+            // 创建热力图数据
+            const heatmapData = [];
+            Object.keys(cityIncrements).forEach(city => {
+                if (cityCoordinates[city]) {
+                    heatmapData.push({
+                        lng: cityCoordinates[city][0],
+                        lat: cityCoordinates[city][1],
+                        count: cityIncrements[city]
+                    });
+                }
+            });
+            
+            // 添加热力图
+            const heatmap = new AMap.HeatMap(map, {
+                radius: 25,
+                opacity: [0, 0.8]
+            });
+            
+            heatmap.setDataSet({
+                data: heatmapData,
+                max: Math.max(...Object.values(cityIncrements))
+            });
+            
+            // 添加标记点
+            Object.keys(cityIncrements).forEach(city => {
+                if (cityCoordinates[city]) {
+                    const marker = new AMap.Marker({
+                        position: cityCoordinates[city],
+                        title: `${city}: +${cityIncrements[city]}家`
+                    });
+                    
+                    marker.setMap(map);
+                    
+                    const infoWindow = new AMap.InfoWindow({
+                        content: `<div style="padding:10px;"><strong>${city}</strong><br/>门店增量: ${cityIncrements[city]}家</div>`
+                    });
+                    
+                    marker.on('click', function() {
+                        infoWindow.open(map, marker.getPosition());
+                    });
+                }
+            });
+        }
+        
+        // 生成省份统计表格
+        function generateProvinceTable() {
+            const data = parseData();
+            const provinceData = aggregateByProvince(data);
+            const tbody = document.querySelector('#provinceTable tbody');
+            
+            provinceData.sort((a, b) => b.totalIncrement - a.totalIncrement);
+            
+            tbody.innerHTML = provinceData.map(p => `
+                <tr>
+                    <td><strong>${p.province}</strong></td>
+                    <td style="color: #e74c3c; font-weight: bold;">+${p.totalIncrement}</td>
+                    <td>${p.totalTarget2025}</td>
+                    <td>${p.cityCount}</td>
+                    <td>${p.avgIncrement}</td>
+                </tr>
+            `).join('');
+        }
+        
+        // 生成Top 10城市图表
+        function generateTop10Chart() {
+            const data = parseData();
+            const top10 = getTop10Cities(data);
+            
+            const ctx = document.getElementById('topCitiesChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: top10.map(city => `${city.city}(${city.province})`),
+                    datasets: [{
+                        label: '门店增量',
+                        data: top10.map(city => city.increment),
+                        backgroundColor: [
+                            '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FECA57',
+                            '#FF9FF3', '#54A0FF', '#5F27CD', '#00D2D3', '#FF9F43'
+                        ],
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '门店增量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '城市'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 页面加载完成后初始化
+        window.onload = function() {
+            // 注意：您需要替换 YOUR_AMAP_KEY 为实际的高德地图API密钥
+            // 可以在高德开放平台申请：https://lbs.amap.com/
+            
+            setTimeout(() => {
+                try {
+                    initMap();
+                } catch(error) {
+                    console.log('地图初始化失败，请检查API密钥');
+                    document.getElementById('mapContainer').innerHTML = 
+                        '<div style="display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;">请在代码中配置正确的高德地图API密钥</div>';
+                }
+            }, 100);
+            
+            generateProvinceTable();
+            generateTop10Chart();
+        };
+    </script>
+</body>
+</html>
