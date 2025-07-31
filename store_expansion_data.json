@@ -1,0 +1,1525 @@
+{
+  "metadata": {
+    "title": "汽车租赁门店扩张计划数据",
+    "description": "2024-2025年全国汽车租赁门店扩张计划预处理数据",
+    "generated_at": "2025-07-29 17:53:56",
+    "data_source": "汽车租赁门店扩张计划.xlsx"
+  },
+  "summary_stats": {
+    "total_cities": 110,
+    "total_provinces": 31,
+    "total_increment_nationwide": 2403,
+    "total_stores_2024": 9790,
+    "total_stores_2025": 12193,
+    "avg_increment_per_city": 21.8,
+    "max_increment_city": "阿克苏地区",
+    "max_increment_value": 63,
+    "min_increment_city": "三亚",
+    "min_increment_value": 5
+  },
+  "heatmap_data": {
+    "description": "城市层级门店增量热力地图数据",
+    "data": [
+      {
+        "city": "池州",
+        "province": "安徽",
+        "increment": 17,
+        "stores_2024": 55,
+        "stores_2025": 72,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "池州市九华山风景区"
+      },
+      {
+        "city": "滁州",
+        "province": "安徽",
+        "increment": 17,
+        "stores_2024": 55,
+        "stores_2025": 72,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "滁州市琅琊山景区"
+      },
+      {
+        "city": "黄山",
+        "province": "安徽",
+        "increment": 17,
+        "stores_2024": 55,
+        "stores_2025": 72,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "黄山市黄山风景区"
+      },
+      {
+        "city": "宣城",
+        "province": "安徽",
+        "increment": 17,
+        "stores_2024": 55,
+        "stores_2025": 72,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "宣城市绩溪龙川景区"
+      },
+      {
+        "city": "北京",
+        "province": "北京",
+        "increment": 30,
+        "stores_2024": 120,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "故宫博物院"
+      },
+      {
+        "city": "北京",
+        "province": "北京",
+        "increment": 30,
+        "stores_2024": 120,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "天坛公园"
+      },
+      {
+        "city": "北京",
+        "province": "北京",
+        "increment": 30,
+        "stores_2024": 120,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "颐和园"
+      },
+      {
+        "city": "北京",
+        "province": "北京",
+        "increment": 30,
+        "stores_2024": 120,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "八达岭 — 慕田峪长城旅游区"
+      },
+      {
+        "city": "南平",
+        "province": "福建",
+        "increment": 20,
+        "stores_2024": 240,
+        "stores_2025": 260,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "南平市武夷山景区"
+      },
+      {
+        "city": "莆田",
+        "province": "福建",
+        "increment": 20,
+        "stores_2024": 240,
+        "stores_2025": 260,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "莆田市湄洲岛妈祖文化旅游区"
+      },
+      {
+        "city": "厦门",
+        "province": "福建",
+        "increment": 20,
+        "stores_2024": 240,
+        "stores_2025": 260,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "厦门市鼓浪屿风景名胜区"
+      },
+      {
+        "city": "厦门",
+        "province": "福建",
+        "increment": 20,
+        "stores_2024": 240,
+        "stores_2025": 260,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "厦门市厦门园林植物园景区"
+      },
+      {
+        "city": "甘南州",
+        "province": "甘肃",
+        "increment": 10,
+        "stores_2024": 80,
+        "stores_2025": 90,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "甘南州冶力关旅游区"
+      },
+      {
+        "city": "酒泉",
+        "province": "甘肃",
+        "increment": 10,
+        "stores_2024": 80,
+        "stores_2025": 90,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "酒泉市敦煌莫高窟景区"
+      },
+      {
+        "city": "兰州",
+        "province": "甘肃",
+        "increment": 10,
+        "stores_2024": 80,
+        "stores_2025": 90,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "兰州市兰州百里黄河风情线大景区"
+      },
+      {
+        "city": "张掖",
+        "province": "甘肃",
+        "increment": 10,
+        "stores_2024": 80,
+        "stores_2025": 90,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "张掖市七彩丹霞旅游景区"
+      },
+      {
+        "city": "广州",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 5,
+        "5a_scenic": "广州市长隆旅游度假区"
+      },
+      {
+        "city": "河源",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 5,
+        "5a_scenic": "河源市万绿湖风景区"
+      },
+      {
+        "city": "惠州",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 5,
+        "5a_scenic": "惠州市罗浮山景区"
+      },
+      {
+        "city": "韶关",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 5,
+        "5a_scenic": "韶关市丹霞山景区"
+      },
+      {
+        "city": "深圳",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 5,
+        "5a_scenic": "深圳市华侨城旅游度假区"
+      },
+      {
+        "city": "崇左",
+        "province": "广西",
+        "increment": 15,
+        "stores_2024": 45,
+        "stores_2025": 60,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "崇左市德天跨国瀑布景区"
+      },
+      {
+        "city": "桂林",
+        "province": "广西",
+        "increment": 15,
+        "stores_2024": 45,
+        "stores_2025": 60,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "桂林市漓江景区"
+      },
+      {
+        "city": "桂林",
+        "province": "广西",
+        "increment": 15,
+        "stores_2024": 45,
+        "stores_2025": 60,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "桂林市独秀峰・王城景区"
+      },
+      {
+        "city": "柳州",
+        "province": "广西",
+        "increment": 15,
+        "stores_2024": 45,
+        "stores_2025": 60,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "柳州市程阳八寨景区"
+      },
+      {
+        "city": "安顺",
+        "province": "贵州",
+        "increment": 18,
+        "stores_2024": 22,
+        "stores_2025": 40,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "安顺市黄果树大瀑布景区"
+      },
+      {
+        "city": "毕节",
+        "province": "贵州",
+        "increment": 18,
+        "stores_2024": 22,
+        "stores_2025": 40,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "毕节市织金洞景区"
+      },
+      {
+        "city": "贵阳",
+        "province": "贵州",
+        "increment": 18,
+        "stores_2024": 22,
+        "stores_2025": 40,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "贵阳市花溪青岩古镇景区"
+      },
+      {
+        "city": "黔西南州",
+        "province": "贵州",
+        "increment": 18,
+        "stores_2024": 22,
+        "stores_2025": 40,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "黔西南州万峰林景区"
+      },
+      {
+        "city": "三亚",
+        "province": "海南",
+        "increment": 5,
+        "stores_2024": 20,
+        "stores_2025": 25,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "三亚市南山文化旅游区"
+      },
+      {
+        "city": "三亚",
+        "province": "海南",
+        "increment": 5,
+        "stores_2024": 20,
+        "stores_2025": 25,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "三亚市天涯海角游览区"
+      },
+      {
+        "city": "保定",
+        "province": "河北",
+        "increment": 10,
+        "stores_2024": 35,
+        "stores_2025": 45,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "保定市白洋淀景区"
+      },
+      {
+        "city": "承德",
+        "province": "河北",
+        "increment": 10,
+        "stores_2024": 35,
+        "stores_2025": 45,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "承德市承德避暑山庄及周围寺庙景区"
+      },
+      {
+        "city": "邯郸",
+        "province": "河北",
+        "increment": 10,
+        "stores_2024": 35,
+        "stores_2025": 45,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "邯郸市娲皇宫景区"
+      },
+      {
+        "city": "石家庄",
+        "province": "河北",
+        "increment": 10,
+        "stores_2024": 35,
+        "stores_2025": 45,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 4,
+        "5a_scenic": "石家庄市西柏坡景区"
+      },
+      {
+        "city": "焦作",
+        "province": "河南",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "焦作市云台山风景名胜区"
+      },
+      {
+        "city": "洛阳",
+        "province": "河南",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "洛阳市龙门石窟景区"
+      },
+      {
+        "city": "新乡",
+        "province": "河南",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "新乡市宝泉旅游区"
+      },
+      {
+        "city": "郑州",
+        "province": "河南",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "郑州市嵩山少林寺景区"
+      },
+      {
+        "city": "哈尔滨",
+        "province": "黑龙江",
+        "increment": 8,
+        "stores_2024": 62,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "哈尔滨市太阳岛景区"
+      },
+      {
+        "city": "齐齐哈尔",
+        "province": "黑龙江",
+        "increment": 8,
+        "stores_2024": 62,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "齐齐哈尔市扎龙生态旅游区"
+      },
+      {
+        "city": "五大连池",
+        "province": "黑龙江",
+        "increment": 8,
+        "stores_2024": 62,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "五大连池风景区"
+      },
+      {
+        "city": "黄冈",
+        "province": "湖北",
+        "increment": 17,
+        "stores_2024": 133,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "黄冈市麻城龟峰山景区"
+      },
+      {
+        "city": "神农架林区",
+        "province": "湖北",
+        "increment": 17,
+        "stores_2024": 133,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "神农架林区神农架景区"
+      },
+      {
+        "city": "十堰",
+        "province": "湖北",
+        "increment": 17,
+        "stores_2024": 133,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "十堰市武当山风景区"
+      },
+      {
+        "city": "武汉",
+        "province": "湖北",
+        "increment": 17,
+        "stores_2024": 133,
+        "stores_2025": 150,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "武汉市黄鹤楼公园"
+      },
+      {
+        "city": "衡阳",
+        "province": "湖南",
+        "increment": 16,
+        "stores_2024": 114,
+        "stores_2025": 130,
+        "franchise_ratio": 0.21,
+        "scenic_spots": 4,
+        "5a_scenic": "衡阳市南岳衡山旅游区"
+      },
+      {
+        "city": "湘西土家族苗族自治州",
+        "province": "湖南",
+        "increment": 16,
+        "stores_2024": 114,
+        "stores_2025": 130,
+        "franchise_ratio": 0.21,
+        "scenic_spots": 4,
+        "5a_scenic": "湘西土家族苗族自治州凤凰古城旅游区"
+      },
+      {
+        "city": "张家界",
+        "province": "湖南",
+        "increment": 16,
+        "stores_2024": 114,
+        "stores_2025": 130,
+        "franchise_ratio": 0.21,
+        "scenic_spots": 4,
+        "5a_scenic": "张家界市武陵源 - 天门山旅游区"
+      },
+      {
+        "city": "长沙",
+        "province": "湖南",
+        "increment": 16,
+        "stores_2024": 114,
+        "stores_2025": 130,
+        "franchise_ratio": 0.21,
+        "scenic_spots": 4,
+        "5a_scenic": "长沙市岳麓山・橘子洲旅游区"
+      },
+      {
+        "city": "松原",
+        "province": "吉林",
+        "increment": 9,
+        "stores_2024": 46,
+        "stores_2025": 55,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "松原市前郭查干湖景区"
+      },
+      {
+        "city": "延边朝鲜族自治州",
+        "province": "吉林",
+        "increment": 9,
+        "stores_2024": 46,
+        "stores_2025": 55,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "延边朝鲜族自治州长白山景区"
+      },
+      {
+        "city": "长春",
+        "province": "吉林",
+        "increment": 9,
+        "stores_2024": 46,
+        "stores_2025": 55,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "长春市伪满皇宫博物馆"
+      },
+      {
+        "city": "常州",
+        "province": "江苏",
+        "increment": 8,
+        "stores_2024": 192,
+        "stores_2025": 200,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "常州市天目湖景区"
+      },
+      {
+        "city": "连云港",
+        "province": "江苏",
+        "increment": 8,
+        "stores_2024": 192,
+        "stores_2025": 200,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "连云港市连岛景区"
+      },
+      {
+        "city": "南京",
+        "province": "江苏",
+        "increment": 8,
+        "stores_2024": 192,
+        "stores_2025": 200,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "南京市夫子庙 - 秦淮风光带景区"
+      },
+      {
+        "city": "苏州",
+        "province": "江苏",
+        "increment": 8,
+        "stores_2024": 192,
+        "stores_2025": 200,
+        "franchise_ratio": 0.25,
+        "scenic_spots": 4,
+        "5a_scenic": "苏州市苏州园林（拙政园、留园、虎丘）"
+      },
+      {
+        "city": "九江",
+        "province": "江西",
+        "increment": 11,
+        "stores_2024": 89,
+        "stores_2025": 100,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "九江市庐山景区"
+      },
+      {
+        "city": "南昌",
+        "province": "江西",
+        "increment": 11,
+        "stores_2024": 89,
+        "stores_2025": 100,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "南昌市滕王阁旅游区"
+      },
+      {
+        "city": "上饶",
+        "province": "江西",
+        "increment": 11,
+        "stores_2024": 89,
+        "stores_2025": 100,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "上饶市三清山景区"
+      },
+      {
+        "city": "上饶",
+        "province": "江西",
+        "increment": 11,
+        "stores_2024": 89,
+        "stores_2025": 100,
+        "franchise_ratio": 0.18,
+        "scenic_spots": 4,
+        "5a_scenic": "上饶市篁岭景区"
+      },
+      {
+        "city": "本溪",
+        "province": "辽宁",
+        "increment": 25,
+        "stores_2024": 15,
+        "stores_2025": 40,
+        "franchise_ratio": 0.33,
+        "scenic_spots": 3,
+        "5a_scenic": "本溪市本溪水洞景区"
+      },
+      {
+        "city": "大连",
+        "province": "辽宁",
+        "increment": 25,
+        "stores_2024": 15,
+        "stores_2025": 40,
+        "franchise_ratio": 0.33,
+        "scenic_spots": 3,
+        "5a_scenic": "大连市老虎滩海洋公园 — 老虎滩极地馆"
+      },
+      {
+        "city": "沈阳",
+        "province": "辽宁",
+        "increment": 25,
+        "stores_2024": 15,
+        "stores_2025": 40,
+        "franchise_ratio": 0.33,
+        "scenic_spots": 3,
+        "5a_scenic": "沈阳市沈阳植物园"
+      },
+      {
+        "city": "鄂尔多斯",
+        "province": "内蒙古",
+        "increment": 26,
+        "stores_2024": 44,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "鄂尔多斯市响沙湾旅游区"
+      },
+      {
+        "city": "呼伦贝尔",
+        "province": "内蒙古",
+        "increment": 26,
+        "stores_2024": 44,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "呼伦贝尔市中俄边境旅游区"
+      },
+      {
+        "city": "兴安盟",
+        "province": "内蒙古",
+        "increment": 26,
+        "stores_2024": 44,
+        "stores_2025": 70,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 3,
+        "5a_scenic": "兴安盟阿尔山 - 柴河旅游景区"
+      },
+      {
+        "city": "固原",
+        "province": "宁夏",
+        "increment": 25,
+        "stores_2024": 35,
+        "stores_2025": 60,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 3,
+        "5a_scenic": "固原市六盘山红军长征旅游区"
+      },
+      {
+        "city": "银川",
+        "province": "宁夏",
+        "increment": 25,
+        "stores_2024": 35,
+        "stores_2025": 60,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 3,
+        "5a_scenic": "银川市镇北堡西部影视城"
+      },
+      {
+        "city": "中卫",
+        "province": "宁夏",
+        "increment": 25,
+        "stores_2024": 35,
+        "stores_2025": 60,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 3,
+        "5a_scenic": "中卫市沙坡头旅游景区"
+      },
+      {
+        "city": "海北州",
+        "province": "青海",
+        "increment": 25,
+        "stores_2024": 25,
+        "stores_2025": 50,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "海北州阿咪东索景区"
+      },
+      {
+        "city": "西宁",
+        "province": "青海",
+        "increment": 25,
+        "stores_2024": 25,
+        "stores_2025": 50,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "西宁市青海湖景区"
+      },
+      {
+        "city": "济南",
+        "province": "山东",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "济南市天下第一泉风景区"
+      },
+      {
+        "city": "济宁",
+        "province": "山东",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "济宁市曲阜明故城（三孔）旅游区"
+      },
+      {
+        "city": "青岛",
+        "province": "山东",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "青岛市奥帆海洋文化旅游区"
+      },
+      {
+        "city": "泰安",
+        "province": "山东",
+        "increment": 8,
+        "stores_2024": 52,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "泰安市泰山景区"
+      },
+      {
+        "city": "大同",
+        "province": "山西",
+        "increment": 14,
+        "stores_2024": 46,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "大同市云冈石窟景区"
+      },
+      {
+        "city": "晋中",
+        "province": "山西",
+        "increment": 14,
+        "stores_2024": 46,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "晋中市平遥古城景区"
+      },
+      {
+        "city": "临汾",
+        "province": "山西",
+        "increment": 14,
+        "stores_2024": 46,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "临汾市洪洞大槐树寻根祭祖园旅游景区"
+      },
+      {
+        "city": "忻州",
+        "province": "山西",
+        "increment": 14,
+        "stores_2024": 46,
+        "stores_2025": 60,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "忻州市五台山风景名胜区"
+      },
+      {
+        "city": "渭南",
+        "province": "陕西",
+        "increment": 22,
+        "stores_2024": 58,
+        "stores_2025": 80,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "渭南市华山景区"
+      },
+      {
+        "city": "西安",
+        "province": "陕西",
+        "increment": 22,
+        "stores_2024": 58,
+        "stores_2025": 80,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "西安市秦始皇兵马俑博物馆"
+      },
+      {
+        "city": "西安",
+        "province": "陕西",
+        "increment": 22,
+        "stores_2024": 58,
+        "stores_2025": 80,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "西安市华清池景区"
+      },
+      {
+        "city": "延安",
+        "province": "陕西",
+        "increment": 22,
+        "stores_2024": 58,
+        "stores_2025": 80,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 4,
+        "5a_scenic": "延安市延川黄河乾坤湾景区"
+      },
+      {
+        "city": "上海",
+        "province": "上海",
+        "increment": 15,
+        "stores_2024": 35,
+        "stores_2025": 50,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 1,
+        "5a_scenic": "上海市崇明区西沙明珠湖景区"
+      },
+      {
+        "city": "阿坝藏族羌族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 5,
+        "5a_scenic": "阿坝藏族羌族自治州九寨沟景区"
+      },
+      {
+        "city": "阿坝藏族羌族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 5,
+        "5a_scenic": "阿坝藏族羌族自治州四姑娘山景区"
+      },
+      {
+        "city": "成都",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 5,
+        "5a_scenic": "成都市青城山 - 都江堰旅游景区"
+      },
+      {
+        "city": "甘孜藏族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 5,
+        "5a_scenic": "甘孜藏族自治州稻城亚丁景区"
+      },
+      {
+        "city": "乐山",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 5,
+        "5a_scenic": "乐山市峨眉山景区"
+      },
+      {
+        "city": "天津",
+        "province": "天津",
+        "increment": 10,
+        "stores_2024": 30,
+        "stores_2025": 40,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "天津古文化街旅游区（津门故里）"
+      },
+      {
+        "city": "天津",
+        "province": "天津",
+        "increment": 10,
+        "stores_2024": 30,
+        "stores_2025": 40,
+        "franchise_ratio": 0.2,
+        "scenic_spots": 2,
+        "5a_scenic": "盘山风景名胜区"
+      },
+      {
+        "city": "拉萨",
+        "province": "西藏",
+        "increment": 32,
+        "stores_2024": 68,
+        "stores_2025": 100,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 2,
+        "5a_scenic": "拉萨市布达拉宫景区"
+      },
+      {
+        "city": "拉萨",
+        "province": "西藏",
+        "increment": 32,
+        "stores_2024": 68,
+        "stores_2025": 100,
+        "franchise_ratio": 0.5,
+        "scenic_spots": 2,
+        "5a_scenic": "拉萨市大昭寺景区"
+      },
+      {
+        "city": "阿克苏地区",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "阿克苏地区天山托木尔景区"
+      },
+      {
+        "city": "阿勒泰地区",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "阿勒泰地区喀纳斯景区"
+      },
+      {
+        "city": "乌鲁木齐",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "乌鲁木齐市天山天池风景名胜区"
+      },
+      {
+        "city": "伊犁哈萨克自治州",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "伊犁哈萨克自治州那拉提旅游风景区"
+      },
+      {
+        "city": "迪庆藏族自治州",
+        "province": "云南",
+        "increment": 40,
+        "stores_2024": 160,
+        "stores_2025": 200,
+        "franchise_ratio": 0.4,
+        "scenic_spots": 4,
+        "5a_scenic": "迪庆藏族自治州香格里拉普达措国家公园"
+      },
+      {
+        "city": "昆明",
+        "province": "云南",
+        "increment": 40,
+        "stores_2024": 160,
+        "stores_2025": 200,
+        "franchise_ratio": 0.4,
+        "scenic_spots": 4,
+        "5a_scenic": "昆明市石林风景区"
+      },
+      {
+        "city": "丽江",
+        "province": "云南",
+        "increment": 40,
+        "stores_2024": 160,
+        "stores_2025": 200,
+        "franchise_ratio": 0.4,
+        "scenic_spots": 4,
+        "5a_scenic": "丽江市丽江古城景区"
+      },
+      {
+        "city": "腾冲",
+        "province": "云南",
+        "increment": 40,
+        "stores_2024": 160,
+        "stores_2025": 200,
+        "franchise_ratio": 0.4,
+        "scenic_spots": 4,
+        "5a_scenic": "腾冲市和顺古镇景区"
+      },
+      {
+        "city": "杭州",
+        "province": "浙江",
+        "increment": 20,
+        "stores_2024": 230,
+        "stores_2025": 250,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "杭州市西湖风景名胜区"
+      },
+      {
+        "city": "丽水",
+        "province": "浙江",
+        "increment": 20,
+        "stores_2024": 230,
+        "stores_2025": 250,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "丽水市云和梯田景区"
+      },
+      {
+        "city": "温州",
+        "province": "浙江",
+        "increment": 20,
+        "stores_2024": 230,
+        "stores_2025": 250,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "温州市刘伯温故里景区"
+      },
+      {
+        "city": "舟山",
+        "province": "浙江",
+        "increment": 20,
+        "stores_2024": 230,
+        "stores_2025": 250,
+        "franchise_ratio": 0.1,
+        "scenic_spots": 4,
+        "5a_scenic": "舟山市普陀山风景名胜区"
+      },
+      {
+        "city": "重庆",
+        "province": "重庆",
+        "increment": 33,
+        "stores_2024": 67,
+        "stores_2025": 100,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "重庆市大足石刻景区"
+      },
+      {
+        "city": "重庆",
+        "province": "重庆",
+        "increment": 33,
+        "stores_2024": 67,
+        "stores_2025": 100,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "重庆市武隆喀斯特旅游区"
+      },
+      {
+        "city": "重庆",
+        "province": "重庆",
+        "increment": 33,
+        "stores_2024": 67,
+        "stores_2025": 100,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "重庆市涪陵区武陵山大裂谷景区"
+      },
+      {
+        "city": "重庆",
+        "province": "重庆",
+        "increment": 33,
+        "stores_2024": 67,
+        "stores_2025": 100,
+        "franchise_ratio": 0.3,
+        "scenic_spots": 4,
+        "5a_scenic": "重庆市奉节县白帝城・瞿塘峡景区"
+      }
+    ]
+  },
+  "province_overview": {
+    "description": "省级汇总数据用于全国总览",
+    "data": [
+      {
+        "province": "新疆",
+        "total_increment": 252,
+        "avg_increment_per_city": 63.0,
+        "city_count": 4,
+        "total_stores_2024": 548,
+        "total_stores_2025": 800,
+        "avg_franchise_ratio": 0.3,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "四川",
+        "total_increment": 225,
+        "avg_increment_per_city": 45.0,
+        "city_count": 5,
+        "total_stores_2024": 775,
+        "total_stores_2025": 1000,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 25
+      },
+      {
+        "province": "广东",
+        "total_increment": 220,
+        "avg_increment_per_city": 44.0,
+        "city_count": 5,
+        "total_stores_2024": 380,
+        "total_stores_2025": 600,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 25
+      },
+      {
+        "province": "云南",
+        "total_increment": 160,
+        "avg_increment_per_city": 40.0,
+        "city_count": 4,
+        "total_stores_2024": 640,
+        "total_stores_2025": 800,
+        "avg_franchise_ratio": 0.4,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "重庆",
+        "total_increment": 132,
+        "avg_increment_per_city": 33.0,
+        "city_count": 4,
+        "total_stores_2024": 268,
+        "total_stores_2025": 400,
+        "avg_franchise_ratio": 0.3,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "北京",
+        "total_increment": 120,
+        "avg_increment_per_city": 30.0,
+        "city_count": 4,
+        "total_stores_2024": 480,
+        "total_stores_2025": 600,
+        "avg_franchise_ratio": 0.3,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "陕西",
+        "total_increment": 88,
+        "avg_increment_per_city": 22.0,
+        "city_count": 4,
+        "total_stores_2024": 232,
+        "total_stores_2025": 320,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "浙江",
+        "total_increment": 80,
+        "avg_increment_per_city": 20.0,
+        "city_count": 4,
+        "total_stores_2024": 920,
+        "total_stores_2025": 1000,
+        "avg_franchise_ratio": 0.1,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "福建",
+        "total_increment": 80,
+        "avg_increment_per_city": 20.0,
+        "city_count": 4,
+        "total_stores_2024": 960,
+        "total_stores_2025": 1040,
+        "avg_franchise_ratio": 0.25,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "内蒙古",
+        "total_increment": 78,
+        "avg_increment_per_city": 26.0,
+        "city_count": 3,
+        "total_stores_2024": 132,
+        "total_stores_2025": 210,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 9
+      },
+      {
+        "province": "宁夏",
+        "total_increment": 75,
+        "avg_increment_per_city": 25.0,
+        "city_count": 3,
+        "total_stores_2024": 105,
+        "total_stores_2025": 180,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 9
+      },
+      {
+        "province": "辽宁",
+        "total_increment": 75,
+        "avg_increment_per_city": 25.0,
+        "city_count": 3,
+        "total_stores_2024": 45,
+        "total_stores_2025": 120,
+        "avg_franchise_ratio": 0.33,
+        "total_scenic_spots": 9
+      },
+      {
+        "province": "贵州",
+        "total_increment": 72,
+        "avg_increment_per_city": 18.0,
+        "city_count": 4,
+        "total_stores_2024": 88,
+        "total_stores_2025": 160,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "安徽",
+        "total_increment": 68,
+        "avg_increment_per_city": 17.0,
+        "city_count": 4,
+        "total_stores_2024": 220,
+        "total_stores_2025": 288,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "湖北",
+        "total_increment": 68,
+        "avg_increment_per_city": 17.0,
+        "city_count": 4,
+        "total_stores_2024": 532,
+        "total_stores_2025": 600,
+        "avg_franchise_ratio": 0.3,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "湖南",
+        "total_increment": 64,
+        "avg_increment_per_city": 16.0,
+        "city_count": 4,
+        "total_stores_2024": 456,
+        "total_stores_2025": 520,
+        "avg_franchise_ratio": 0.21,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "西藏",
+        "total_increment": 64,
+        "avg_increment_per_city": 32.0,
+        "city_count": 2,
+        "total_stores_2024": 136,
+        "total_stores_2025": 200,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 4
+      },
+      {
+        "province": "广西",
+        "total_increment": 60,
+        "avg_increment_per_city": 15.0,
+        "city_count": 4,
+        "total_stores_2024": 180,
+        "total_stores_2025": 240,
+        "avg_franchise_ratio": 0.18,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "山西",
+        "total_increment": 56,
+        "avg_increment_per_city": 14.0,
+        "city_count": 4,
+        "total_stores_2024": 184,
+        "total_stores_2025": 240,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "青海",
+        "total_increment": 50,
+        "avg_increment_per_city": 25.0,
+        "city_count": 2,
+        "total_stores_2024": 50,
+        "total_stores_2025": 100,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 4
+      },
+      {
+        "province": "江西",
+        "total_increment": 44,
+        "avg_increment_per_city": 11.0,
+        "city_count": 4,
+        "total_stores_2024": 356,
+        "total_stores_2025": 400,
+        "avg_franchise_ratio": 0.18,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "河北",
+        "total_increment": 40,
+        "avg_increment_per_city": 10.0,
+        "city_count": 4,
+        "total_stores_2024": 140,
+        "total_stores_2025": 180,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "甘肃",
+        "total_increment": 40,
+        "avg_increment_per_city": 10.0,
+        "city_count": 4,
+        "total_stores_2024": 320,
+        "total_stores_2025": 360,
+        "avg_franchise_ratio": 0.1,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "山东",
+        "total_increment": 32,
+        "avg_increment_per_city": 8.0,
+        "city_count": 4,
+        "total_stores_2024": 208,
+        "total_stores_2025": 240,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "江苏",
+        "total_increment": 32,
+        "avg_increment_per_city": 8.0,
+        "city_count": 4,
+        "total_stores_2024": 768,
+        "total_stores_2025": 800,
+        "avg_franchise_ratio": 0.25,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "河南",
+        "total_increment": 32,
+        "avg_increment_per_city": 8.0,
+        "city_count": 4,
+        "total_stores_2024": 208,
+        "total_stores_2025": 240,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 16
+      },
+      {
+        "province": "吉林",
+        "total_increment": 27,
+        "avg_increment_per_city": 9.0,
+        "city_count": 3,
+        "total_stores_2024": 138,
+        "total_stores_2025": 165,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 9
+      },
+      {
+        "province": "黑龙江",
+        "total_increment": 24,
+        "avg_increment_per_city": 8.0,
+        "city_count": 3,
+        "total_stores_2024": 186,
+        "total_stores_2025": 210,
+        "avg_franchise_ratio": 0.5,
+        "total_scenic_spots": 9
+      },
+      {
+        "province": "天津",
+        "total_increment": 20,
+        "avg_increment_per_city": 10.0,
+        "city_count": 2,
+        "total_stores_2024": 60,
+        "total_stores_2025": 80,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 4
+      },
+      {
+        "province": "上海",
+        "total_increment": 15,
+        "avg_increment_per_city": 15.0,
+        "city_count": 1,
+        "total_stores_2024": 35,
+        "total_stores_2025": 50,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 1
+      },
+      {
+        "province": "海南",
+        "total_increment": 10,
+        "avg_increment_per_city": 5.0,
+        "city_count": 2,
+        "total_stores_2024": 40,
+        "total_stores_2025": 50,
+        "avg_franchise_ratio": 0.2,
+        "total_scenic_spots": 4
+      }
+    ]
+  },
+  "top10_cities": {
+    "description": "Top 10城市增量排名数据",
+    "data": [
+      {
+        "city": "阿克苏地区",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "growth_rate": 46.0
+      },
+      {
+        "city": "阿勒泰地区",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "growth_rate": 46.0
+      },
+      {
+        "city": "乌鲁木齐",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "growth_rate": 46.0
+      },
+      {
+        "city": "伊犁哈萨克自治州",
+        "province": "新疆",
+        "increment": 63,
+        "stores_2024": 137,
+        "stores_2025": 200,
+        "growth_rate": 46.0
+      },
+      {
+        "city": "阿坝藏族羌族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "growth_rate": 29.0
+      },
+      {
+        "city": "阿坝藏族羌族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "growth_rate": 29.0
+      },
+      {
+        "city": "成都",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "growth_rate": 29.0
+      },
+      {
+        "city": "甘孜藏族自治州",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "growth_rate": 29.0
+      },
+      {
+        "city": "乐山",
+        "province": "四川",
+        "increment": 45,
+        "stores_2024": 155,
+        "stores_2025": 200,
+        "growth_rate": 29.0
+      },
+      {
+        "city": "广州",
+        "province": "广东",
+        "increment": 44,
+        "stores_2024": 76,
+        "stores_2025": 120,
+        "growth_rate": 57.9
+      }
+    ]
+  }
+}
