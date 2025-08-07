@@ -1,0 +1,197 @@
+{
+    "designSystem": {
+      "typography": {
+        "fontFamily": "Poppins, sans-serif",
+        "fontWeights": {
+          "regular": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "textColors": {
+          "primary": "#FFFFFF",
+          "secondary": "#CFCFCF",
+          "muted": "#999999",
+          "highlight": "#00FFB2",
+          "emphasis": "#4ECDC4"
+        },
+        "headings": {
+          "h1": {
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "color": "#FFFFFF"
+          },
+          "h2": {
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "color": "#FFFFFF"
+          },
+          "h3": {
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "color": "#CFCFCF"
+          }
+        }
+      },
+      "layout": {
+        "background": "#0E0F12",
+        "sidebar": {
+          "background": "#1B1C1F",
+          "width": "240px",
+          "activeItemBackground": "#25262A",
+          "iconColor": "#B0B0B0",
+          "activeIconColor": "#00FFB2",
+          "activeIconBackground": "#1A1C1F"
+        },
+        "contentArea": {
+          "background": "#121315",
+          "padding": "24px"
+        }
+      },
+      "colors": {
+        "primary": "#00FFB2",
+        "secondary": "#4ECDC4",
+        "accent": "#FF6B6B",
+        "highlight": "#00FFC8",
+        "cardBackground": "#1A1C1F",
+        "cardBorder": "#2C2D30",
+        "chartColors": {
+          "equities": "#00FFB2",
+          "fixedIncome": "#8C52FF",
+          "cash": "#FF6B6B"
+        },
+        "badge": {
+          "background": "#25262A",
+          "border": "#3B3D42",
+          "text": "#CFCFCF"
+        }
+      },
+      "buttons": {
+        "primary": {
+          "background": "linear-gradient(135deg, #00FFB2 0%, #4ECDC4 100%)",
+          "textColor": "#000000",
+          "iconColor": "#000000",
+          "hoverBackground": "linear-gradient(135deg, #00E6A4 0%, #3EC6B2 100%)",
+          "pressedBackground": "#1DE3AD",
+          "disabledBackground": "#2C2D30",
+          "disabledText": "#888888",
+          "borderRadius": "10px"
+        },
+        "secondary": {
+          "background": "#1A1C1F",
+          "border": "#4ECDC4",
+          "textColor": "#4ECDC4",
+          "hoverBackground": "#26282B"
+        }
+      },
+      "cards": {
+        "background": "#1A1C1F",
+        "borderRadius": "12px",
+        "padding": "20px",
+        "boxShadow": "0px 0px 10px rgba(0, 255, 178, 0.1)",
+        "hoverShadow": "0px 0px 12px rgba(0, 255, 178, 0.2)"
+      },
+      "shadows": {
+        "default": "0px 0px 8px rgba(0, 0, 0, 0.3)",
+        "highlight": "0px 0px 12px rgba(0, 255, 178, 0.2)"
+      },
+      "borders": {
+        "default": "1px solid #2C2D30",
+        "card": "1px solid #2E2F33"
+      },
+      "icons": {
+        "defaultFill": "#B0B0B0",
+        "activeFill": "#00FFB2",
+        "background": "#2A2B2E",
+        "hoverFill": "#4ECDC4",
+        "size": "20px"
+      },
+      "inputs": {
+        "background": "#1F2023",
+        "border": "#2C2D30",
+        "textColor": "#FFFFFF",
+        "placeholderColor": "#777777",
+        "focusBorder": "#00FFB2",
+        "borderRadius": "8px"
+      },
+      "visualEffects": {
+        "gradients": {
+          "mainCTA": "linear-gradient(135deg, #00FFB2 0%, #4ECDC4 100%)",
+          "cardAccent": "linear-gradient(135deg, #2A2B2E 0%, #1F2023 100%)"
+        },
+        "hoverStates": {
+          "cards": {
+            "shadow": "0px 0px 12px rgba(0, 255, 178, 0.2)"
+          },
+          "buttons": {
+            "transform": "scale(1.02)"
+          }
+        }
+      },
+      "componentStates": {
+        "button": {
+          "default": {
+            "background": "linear-gradient(135deg, #00FFB2 0%, #4ECDC4 100%)",
+            "textColor": "#000000"
+          },
+          "hover": {
+            "background": "linear-gradient(135deg, #00E6A4 0%, #3EC6B2 100%)"
+          },
+          "pressed": {
+            "background": "#1DE3AD"
+          },
+          "disabled": {
+            "background": "#2C2D30",
+            "textColor": "#888888"
+          },
+          "focus": {
+            "outline": "2px solid #00FFB2"
+          }
+        },
+        "input": {
+          "default": {
+            "border": "1px solid #2C2D30"
+          },
+          "focus": {
+            "border": "1px solid #00FFB2",
+            "boxShadow": "0 0 0 2px rgba(0,255,178,0.4)"
+          }
+        },
+        "card": {
+          "default": {
+            "background": "#1A1C1F",
+            "boxShadow": "0px 0px 10px rgba(0, 255, 178, 0.1)"
+          },
+          "hover": {
+            "boxShadow": "0px 0px 12px rgba(0, 255, 178, 0.2)"
+          }
+        }
+      },
+      "charts": {
+        "barChart": {
+          "barColors": {
+            "clientPortfolio": "#00FFB2",
+            "cioHouseView": "#8C52FF"
+          },
+          "gridLineColor": "#2C2D30",
+          "axisColor": "#CFCFCF"
+        },
+        "donutChart": {
+          "segmentColors": {
+            "equities": "#00FFB2",
+            "fixedIncome": "#8C52FF",
+            "cash": "#FF6B6B"
+          },
+          "labelColor": "#CFCFCF"
+        },
+        "candlestickChart": {
+          "positive": "#00FFB2",
+          "negative": "#8C52FF",
+          "grid": "#2C2D30",
+          "highlight": "#FFFFFF"
+        }
+      }
+    }
+  }
+  
+  
